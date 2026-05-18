@@ -6,6 +6,14 @@ class GitCloneWorktree < Formula
   sha256 "d392fab67c75ee8ba0aaf5e8a9418dfad8277d87dc5f0e155ed53ee35c12b60e"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/fgallardograzio/homebrew-tap/releases/download/git-clone-worktree-1.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "df6f1a523ef36b553f2d033d920edb969caed15ac3c45691b2fada51bcfd0b8d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c42cad0d2619f630cc16f13090e5011af65736488d715bf923d4281e1e8288cc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e3a1b4fff48127794aa1ed3dff8afd3cb6bf546a244d63dcf08474e3395dd4ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "52628bfe4ce0fd895268af5facbc42dd2973fc8f5fee64688b34ba8b43ee3e8b"
+  end
+
   depends_on "pandoc" => :build
 
   def install
