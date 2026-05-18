@@ -8,10 +8,11 @@ class GitCloneWorktree < Formula
 
   bottle do
     root_url "https://github.com/fgallardograzio/homebrew-tap/releases/download/git-clone-worktree-1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "df6f1a523ef36b553f2d033d920edb969caed15ac3c45691b2fada51bcfd0b8d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c42cad0d2619f630cc16f13090e5011af65736488d715bf923d4281e1e8288cc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e3a1b4fff48127794aa1ed3dff8afd3cb6bf546a244d63dcf08474e3395dd4ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "52628bfe4ce0fd895268af5facbc42dd2973fc8f5fee64688b34ba8b43ee3e8b"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "76ee9dee27abf0df89f6b8f88eb16f0481cee380429ce391fb0b7bf8625bdf66"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b1afeaa53dfc545b69d1add08764261062b624a5a6d6aedb12e6721d7bff9467"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "172da214cd2c49e43133e0f3b02344489ae54fa2516cc6f0b5755a3d9e1305f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e212d808c06cabc10f1b3bf426cc0d0028e7571c92d5e053b3a8a6a89ea73e1"
   end
 
   def install
