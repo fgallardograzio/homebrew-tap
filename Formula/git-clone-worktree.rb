@@ -2,8 +2,8 @@ class GitCloneWorktree < Formula
   desc "Clones a bare git repo and checks out the default branch as a worktree"
   homepage "https://github.com/fgallardograzio/git-clone-worktree"
 
-  url "https://github.com/fgallardograzio/git-clone-worktree/releases/download/v1.0.0/git-clone-worktree-v1.0.0.tar.gz"
-  sha256 "a91b36101c0dd4c234966857e9180a22e2ec49452d7342dfa90a361cc188b861"
+  url "https://github.com/fgallardograzio/git-clone-worktree/releases/download/v1.0.1/git-clone-worktree-v1.0.1.tar.gz"
+  sha256 "a04cd3eddd3d34e78dbc5aef492f98259b87b90dc250c5b56b35a2304de46c3b"
   license "MIT"
 
   bottle do
@@ -18,6 +18,10 @@ class GitCloneWorktree < Formula
   def install
     bin.install "src/git-clone-worktree"
     man1.install "man/git-clone-worktree.1"
+
+    bash_completion.install "completions/git-clone-worktree.bash" => "git-clone-worktree"
+    zsh_completion.install "completions/_git-clone-worktree"
+    fish_completion.install "completions/git-clone-worktree.fish"
   end
 
   test do
